@@ -8,7 +8,7 @@ function SpawnProps()
         end
         local prop = CreateObject(v.model, v.coords.x, v.coords.y, v.coords.z - 1, true, true, false)
         entity_ids[#entity_ids + 1] = prop
-        SetEntityHeading(prop, v.coords.w)
+        SetEntityHeading(prop, v.coords.w -180)
         FreezeEntityPosition(prop, true)
         print("^3Prop Spawned:" .. v.coords)
     end
