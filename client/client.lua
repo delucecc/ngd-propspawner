@@ -1,12 +1,12 @@
 local entity_ids = {}
 if Config.Persistent then
-    if Config.Framework == 'qb' then
+    if Config.FrameWork == 'qb' then
         QBCore = exports['qb-core']:GetCoreObject()
         AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
             Wait(1500)
             SpawnProps()
         end)
-    elseif Config.Framework == 'esx' then
+    elseif Config.FrameWork == 'esx' then
         local ESX = exports["es_extended"]:getSharedObject()
         RegisterNetEvent('esx:playerLoaded')
         AddEventHandler('esx:playerLoaded', function()
